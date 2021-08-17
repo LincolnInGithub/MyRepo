@@ -70,11 +70,11 @@ key为”annotation“的value对应不同的xxx.json略有不同，但表示内
 13、download：从mscoco.org服务器下载COCO图像。  
    下面展示了数据加载、解析和可视化注释等内容，步骤如下：  
 ### 1、首先导入必要的包  
-![image](https://user-images.githubusercontent.com/88335850/129652288-5d1e5b78-2942-41ea-932a-f34d6b9d0a11.png)
+![image](https://user-images.githubusercontent.com/88335850/129652288-5d1e5b78-2942-41ea-932a-f34d6b9d0a11.png)  
 ### 2、定义annotation文件路径（以“instances_val2014.json”为例）  
-![image](https://user-images.githubusercontent.com/88335850/129652355-267fc728-c582-41dd-9a8c-b16451797d36.png)
+![image](https://user-images.githubusercontent.com/88335850/129652355-267fc728-c582-41dd-9a8c-b16451797d36.png)  
 ### 3、读取instances_val2014.json文件到COCO类  
-![image](https://user-images.githubusercontent.com/88335850/129652454-f4872995-4cba-4bf3-b5ac-cd98d4c1e3bb.png)  
+![image](https://user-images.githubusercontent.com/88335850/129652454-f4872995-4cba-4bf3-b5ac-cd98d4c1e3bb.png)    
 #### 输出如下：  
 loading annotations into memory…  
 Done (t=4.19s)  
@@ -83,34 +83,34 @@ index created!
 ### 4、COCO图像类别的读取  
 ![image](https://user-images.githubusercontent.com/88335850/129652516-9a1a46bb-f877-4e88-ac18-917980be7c40.png)  
 #### 输出如下：
-![image](https://user-images.githubusercontent.com/88335850/129652570-4f795a75-742d-41a4-9b22-e4e2456ee95e.png)
+![image](https://user-images.githubusercontent.com/88335850/129652570-4f795a75-742d-41a4-9b22-e4e2456ee95e.png)  
 ### 5、COCO原始图像读取  
 ![image](https://user-images.githubusercontent.com/88335850/129652634-1c9f856f-7ac4-44d1-adf0-85debdae1a22.png)  
 #### 输出如下：  
-![image](https://user-images.githubusercontent.com/88335850/129652670-3573fd46-1b57-416a-8b1c-0e46a784a50c.png)
+![image](https://user-images.githubusercontent.com/88335850/129652670-3573fd46-1b57-416a-8b1c-0e46a784a50c.png)  
 ### 6、加载并显示annotations    
-![image](https://user-images.githubusercontent.com/88335850/129652750-37156785-07ae-4129-b0ab-8461760f99e7.png)
+![image](https://user-images.githubusercontent.com/88335850/129652750-37156785-07ae-4129-b0ab-8461760f99e7.png)  
 
 #### 输出如下：  
-![image](https://user-images.githubusercontent.com/88335850/129652784-8e1a7973-c7ef-4985-b749-7d1326ebb230.png)
+![image](https://user-images.githubusercontent.com/88335850/129652784-8e1a7973-c7ef-4985-b749-7d1326ebb230.png)  
 ### 7、加载并显示person_keypoints_2014.json的annotations  
-![image](https://user-images.githubusercontent.com/88335850/129652827-fe7832e0-4a8b-43b6-af48-8dddfcadf61b.png)
+![image](https://user-images.githubusercontent.com/88335850/129652827-fe7832e0-4a8b-43b6-af48-8dddfcadf61b.png)  
 
 #### 输出如下：  
-![image](https://user-images.githubusercontent.com/88335850/129652867-6d92dee7-57fb-408b-bd20-b2126a1b5bd7.png)
+![image](https://user-images.githubusercontent.com/88335850/129652867-6d92dee7-57fb-408b-bd20-b2126a1b5bd7.png)  
 ### 8、加载并显示captions_2014.json.json的annotations  
-![image](https://user-images.githubusercontent.com/88335850/129652933-de185e95-355f-4ddc-a2e2-5e3d3f7ddbac.png)
+![image](https://user-images.githubusercontent.com/88335850/129652933-de185e95-355f-4ddc-a2e2-5e3d3f7ddbac.png)  
 
 #### 输出如下：   
-![image](https://user-images.githubusercontent.com/88335850/129653082-26c4ee47-0ef3-4996-9fab-184f2466417a.png)
-
+![image](https://user-images.githubusercontent.com/88335850/129653082-26c4ee47-0ef3-4996-9fab-184f2466417a.png)  
+ 
 # 五、COCO数据集的评估  
 ## 5.1 IOU值计算  
-![image](https://user-images.githubusercontent.com/88335850/129653224-9e2d867b-a60f-4fc1-b427-8d84e30663f6.png)
+![image](https://user-images.githubusercontent.com/88335850/129653224-9e2d867b-a60f-4fc1-b427-8d84e30663f6.png)  
 
 ## 5.2 COCO评估指标    
 以下为官方公布的指标定义：  
-![image](https://user-images.githubusercontent.com/88335850/129653287-1166f219-895a-4c2c-b387-67190c25db11.png)
+![image](https://user-images.githubusercontent.com/88335850/129653287-1166f219-895a-4c2c-b387-67190c25db11.png)     
 1、除非另有说明，否则AP和AR在多个交汇点（IoU）值上取平均值，使用0.50到0.95共10个IOU阈值下的mAP求平均，结果就是COCO数据集定义的AP，与只用一个IOU=0.50下计算的AP相比，是一个突破；  
 2、AP是所有类别的平均值。传统上，这被称为“平均准确度”（mAP，mean average precision）。官方没有区分AP和mAP（同样是AR和mAR），并假定从上下文中可以清楚地看出差异。  
 3、AP（所有10个IoU阈值和所有80个类别的平均值）将决定赢家。在考虑COCO性能时，这应该被认为是最重要的一个指标。  
@@ -121,31 +121,31 @@ index created!
 ## 5.3 COCO结果文件统一格式  
 ### Object Detection  
    对于边界框的检测，请使用以下格式:  
-![image](https://user-images.githubusercontent.com/88335850/129653555-605bd98f-630a-4f1f-97c6-00f379049b83.png)
+![image](https://user-images.githubusercontent.com/88335850/129653555-605bd98f-630a-4f1f-97c6-00f379049b83.png)  
 框坐标是从图像左上角测量的浮点数(并且是0索引的)。官方建议将坐标舍入到最接近十分之一像素的位置，以减少JSON文件的大小。    
    对于对象segments的检测(实例分割)，请使用以下格式:    
-  ![image](https://user-images.githubusercontent.com/88335850/129653919-dbdd65fc-33f8-4902-a28d-4272479858b1.png)
+  ![image](https://user-images.githubusercontent.com/88335850/129653919-dbdd65fc-33f8-4902-a28d-4272479858b1.png)  
 ### Keypoint Detection  
-![image](https://user-images.githubusercontent.com/88335850/129654034-62a66dc2-dd18-4d57-afe8-ebc2654064c0.png)
+![image](https://user-images.githubusercontent.com/88335850/129654034-62a66dc2-dd18-4d57-afe8-ebc2654064c0.png)  
 关键点坐标是从左上角图像角测量的浮点数(并且是0索引的)。官方建议四舍五入坐标到最近的像素，以减少文件大小。还请注意，目前还没有使用vi的可视性标志(除了控制可视化之外)，官方建议简单地设置vi=1。  
 ### Stuff Segmentation  
-![image](https://user-images.githubusercontent.com/88335850/129654085-3dd80465-98e1-466e-8b18-8f22a6cf8766.png)
+![image](https://user-images.githubusercontent.com/88335850/129654085-3dd80465-98e1-466e-8b18-8f22a6cf8766.png)  
 除了不需要score字段外，Stuff 分割格式与Object分割格式相同。注意:官方建议用单个二进制掩码对图像中出现的每个标签进行编码。二进制掩码应该使用MaskApi函数encode()通过RLE进行编码。例如，参见cocostuffhelper.py中的segmentationToCocoResult()。为了方便，官方还提供了JSON和png格式之间的转换脚本。  
 ### Panoptic Segmentation  
-![image](https://user-images.githubusercontent.com/88335850/129654154-f051d8fc-1baa-478b-bf5e-9bee9f5bc653.png)
+![image](https://user-images.githubusercontent.com/88335850/129654154-f051d8fc-1baa-478b-bf5e-9bee9f5bc653.png)  
 ### Image Captioning  
-![image](https://user-images.githubusercontent.com/88335850/129654205-580bcc4e-e67e-4c6d-b6d9-16a2af56cc20.png)
+![image](https://user-images.githubusercontent.com/88335850/129654205-580bcc4e-e67e-4c6d-b6d9-16a2af56cc20.png)  
 
 ## 5.4 COCOEVAL API使用（官方例程）  
    COCO还提供了一个计算评估指标的API，即当自己的模型按照官方定义的格式输出后，可以使用API进行快速评估模型的一系列指标。下面是  
 ### 1、导入必要的包  
-![image](https://user-images.githubusercontent.com/88335850/129654256-fe7bc4f5-da5a-4251-ab29-7d59a9f4484e.png)
+![image](https://user-images.githubusercontent.com/88335850/129654256-fe7bc4f5-da5a-4251-ab29-7d59a9f4484e.png)  
 ### 2、选择任务  
-![image](https://user-images.githubusercontent.com/88335850/129654292-6c03bc16-caa0-4b83-bf63-af0b93c4a83a.png)
+![image](https://user-images.githubusercontent.com/88335850/129654292-6c03bc16-caa0-4b83-bf63-af0b93c4a83a.png)  
 ### 输出如下：  
 Running demo for bbox results.  
 ### 3、加载json注释文件（即：Ground Truth）  
-![image](https://user-images.githubusercontent.com/88335850/129654374-6764cd3c-91b7-4112-a42f-87b8c09f553e.png)
+![image](https://user-images.githubusercontent.com/88335850/129654374-6764cd3c-91b7-4112-a42f-87b8c09f553e.png)  
 ### 输出如下：  
 loading annotations into memory…  
 Done (t=3.16s)  
@@ -153,16 +153,16 @@ creating index…
 index created!  
 ### 4、加载result文件（即：Predict）  
    COCO.loadRes(resFile)返回的也是一个COCO类，与COCO(annFile)不同的是，前者加载官方规定格式的result文件，后者加载官方提供的json文件。  
-   ![image](https://user-images.githubusercontent.com/88335850/129654461-abdb50c3-5116-462c-9f34-0ca691dd4f1d.png)
+   ![image](https://user-images.githubusercontent.com/88335850/129654461-abdb50c3-5116-462c-9f34-0ca691dd4f1d.png)  
 ### 输出如下：  
 Loading and preparing results…  
 DONE (t=0.03s)  
 creating index…  
 index created!    
 ### 5、使用测试集当中的100张图片进行评估  
-![image](https://user-images.githubusercontent.com/88335850/129654523-d5ddc61c-24b3-4867-a520-bdf2b84f784e.png)
+![image](https://user-images.githubusercontent.com/88335850/129654523-d5ddc61c-24b3-4867-a520-bdf2b84f784e.png)  
 ### 6、执行评估  
-![image](https://user-images.githubusercontent.com/88335850/129654743-51b7d9e7-bf36-463c-b9b5-87b7df9522de.png)
+![image](https://user-images.githubusercontent.com/88335850/129654743-51b7d9e7-bf36-463c-b9b5-87b7df9522de.png)  
 ### 输出如下：  
 Running per image evaluation…  
 Evaluate annotation type bbox  
