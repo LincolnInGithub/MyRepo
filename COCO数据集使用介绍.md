@@ -1,4 +1,5 @@
 # 一、简介
+关于MS COCO数据集的使用说明，转载自 https://blog.csdn.net/qq_29051413/article/details/103448318?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_baidulandingword~default-0.base  
 官方网站：http://cocodataset.org/  
 全称：Microsoft Common Objects in Context （MS COCO）  
 支持任务：Detection、Keypoints、Stuff、Panoptic、Captions  
