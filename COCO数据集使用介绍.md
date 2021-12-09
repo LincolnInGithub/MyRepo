@@ -22,7 +22,7 @@ key为”annotation“的value对应不同的xxx.json略有不同，但表示内
 ## 3.2 非通用字段  
 ### 3.2.1 Object Detection（目标检测）  
   以检测任务为例，对于每一张图片，至少包含一个对象，COCO数据集对每一个对象进行描述，而不是对一张图片。每个对象都包含一系列字段，包括对象的类别id和mask码，mask码的分割格式取决于图像里的对象数目，当一张图像里就一个对象时（iscrowd=0），mask码用RLE格式，当大于一个对象时（iscrowd=1），采用polyhon格式。  
-  需要注意的是，annotations里的image_id就是前面images中的id ！以此将image与annotation对应上。
+  #### 需要注意的是，annotations里的image_id就是前面images中的id ！以此将image与annotation对应上。
 ![image](https://user-images.githubusercontent.com/88335850/129651079-d2c5a6f2-9852-4ed5-a20b-0f03c3f6145e.png)  
 ### 3.2.2 Keypoint Detection（关键点检测）  
   与检测任务一样，一个图像包干若干对象，一个对象对应一个keypoint注释，一个keypoint注释包含对象注释的所有数据（包括id、bbox等）和两个附加字段。  
